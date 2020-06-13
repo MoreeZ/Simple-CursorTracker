@@ -22,19 +22,19 @@
         "Entry"
         {
         "MsmKey" = "8:_17499ADE9A8C533D48BD5DCF513DA88D"
-        "OwnerKey" = "8:_324D1F76DDE449E4A2F01D9F1E6E7904"
+        "OwnerKey" = "8:_618A1A0DC721474FAA2E45C5A83909BB"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_324D1F76DDE449E4A2F01D9F1E6E7904"
+        "MsmKey" = "8:_618A1A0DC721474FAA2E45C5A83909BB"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_6CD7847A77F72DEDAF1AAF8939E47D98"
-        "OwnerKey" = "8:_324D1F76DDE449E4A2F01D9F1E6E7904"
+        "OwnerKey" = "8:_618A1A0DC721474FAA2E45C5A83909BB"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -46,7 +46,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_324D1F76DDE449E4A2F01D9F1E6E7904"
+        "OwnerKey" = "8:_618A1A0DC721474FAA2E45C5A83909BB"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -73,6 +73,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
         "Release"
         {
@@ -89,6 +97,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
     }
     "Deployable"
@@ -377,7 +393,7 @@
         }
         "Shortcut"
         {
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_939D714B21874724A53F8A40F4E0C97F"
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_3B6ED7C4E0C249F4807E0857C8A1C27C"
             {
             "Name" = "8:CursorTracker"
             "Arguments" = "8:"
@@ -385,7 +401,7 @@
             "ShowCmd" = "3:1"
             "IconIndex" = "3:0"
             "Transitive" = "11:FALSE"
-            "Target" = "8:_324D1F76DDE449E4A2F01D9F1E6E7904"
+            "Target" = "8:_618A1A0DC721474FAA2E45C5A83909BB"
             "Folder" = "8:_2BB5B113DB90425EBF9652AEB010E471"
             "WorkingFolder" = "8:_5D399C53795A422A81C35468F8F371BE"
             "Icon" = "8:_1308EE7893964E65A7B0A9BE12C6336D"
@@ -790,7 +806,7 @@
         }
         "ProjectOutput"
         {
-            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_324D1F76DDE449E4A2F01D9F1E6E7904"
+            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_618A1A0DC721474FAA2E45C5A83909BB"
             {
             "SourcePath" = "8:..\\CursorTracker\\obj\\Release\\CursorTracker.exe"
             "TargetName" = "8:"
