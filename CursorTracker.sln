@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.30204.135
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CursorTracker", "CursorTracker\CursorTracker.csproj", "{0CCE59D8-A16D-4D32-83A0-025F96D6DB32}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "CursorTracker Setup", "CursorTracker Setup\CursorTracker Setup.vdproj", "{5603C92C-8DAF-4DCA-99EA-249A416A8551}"
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "CursorTracker Setup", "CursorTracker Setup\CursorTracker Setup.vdproj", "{67FC386E-F232-4814-8948-22D8F34D72B0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,8 @@ Global
 		{0CCE59D8-A16D-4D32-83A0-025F96D6DB32}.Debug|Any CPU.Build.0 = Release|Any CPU
 		{0CCE59D8-A16D-4D32-83A0-025F96D6DB32}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0CCE59D8-A16D-4D32-83A0-025F96D6DB32}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5603C92C-8DAF-4DCA-99EA-249A416A8551}.Debug|Any CPU.ActiveCfg = Debug
-		{5603C92C-8DAF-4DCA-99EA-249A416A8551}.Debug|Any CPU.Build.0 = Debug
-		{5603C92C-8DAF-4DCA-99EA-249A416A8551}.Release|Any CPU.ActiveCfg = Release
-		{5603C92C-8DAF-4DCA-99EA-249A416A8551}.Release|Any CPU.Build.0 = Release
+		{67FC386E-F232-4814-8948-22D8F34D72B0}.Debug|Any CPU.ActiveCfg = Debug
+		{67FC386E-F232-4814-8948-22D8F34D72B0}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
