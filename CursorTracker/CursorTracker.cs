@@ -50,21 +50,60 @@ namespace CursorTracker
 
         private void AddSnapshotOnKeyPress(object sender, System.Windows.Forms.KeyEventArgs e)
         {
-            if(e.Control && e.KeyValue == 49)
+            //Update Snapshot 1: Ctrl + 1
+            if (e.Control && e.KeyValue == 49)
             {
                 snapshot1x.Text = lblx.Text;
                 snapshot1y.Text = lbly.Text;
                 snapshot1rgb.Text = $"({redval.Text}, {greenval.Text}, {blueval.Text})";
                 snapshot1color.BackColor = Color.FromArgb(int.Parse(redval.Text), int.Parse(greenval.Text), int.Parse(blueval.Text));
+                updateFourPoints();
             }
+            //Update Snapshot 2: Ctrl + 2
             if (e.Control && e.KeyValue == 50)
             {
                 snapshot2x.Text = lblx.Text;
                 snapshot2y.Text = lbly.Text;
                 snapshot2rgb.Text = $"({redval.Text}, {greenval.Text}, {blueval.Text})";
                 snapshot2color.BackColor = Color.FromArgb(int.Parse(redval.Text), int.Parse(greenval.Text), int.Parse(blueval.Text));
+                updateFourPoints();
+            }
+            //Toggle Pause: Ctrl + 3
+            if (e.Control && e.KeyValue == 51)
+            {
+                toggleMouseListener();
             }
 
+        }
+
+        private void toggleMouseListener()
+        {
+            if (m_mouseListener.Enabled)
+            {
+                m_mouseListener.Enabled = false;
+                pauseButton.Text = "RESUME";
+                statusLabel.Text = "PAUSED...";
+                statusLabel.ForeColor = Color.Red;
+            }
+            else
+            {
+                m_mouseListener.Enabled = true;
+                pauseButton.Text = "PAUSE";
+                statusLabel.Text = "RUNNING...";
+                statusLabel.ForeColor = Color.Green;
+            }
+        }
+
+        private void updateFourPoints()
+        {
+            string startX = snapshot1x.Text;
+            string startY = snapshot1y.Text;
+            string endX = snapshot2x.Text;
+            string endY = snapshot2y.Text;
+            if(startX.Length > 0 && startY.Length > 0 && endX.Length > 0 && endY.Length > 0)
+            {
+                fourPointsText.Text = $"({startX}, {startY}, {endX}, {endY})";
+            }
         }
 
         [DllImport("gdi32.dll", CharSet = CharSet.Auto, SetLastError = true, ExactSpelling = true)]
@@ -87,6 +126,11 @@ namespace CursorTracker
             }
 
             return screenPixel.GetPixel(0, 0);
+        }
+
+        private void pauseButton_Click(object sender, EventArgs e)
+        {
+            toggleMouseListener();
         }
     }
 }

@@ -57,6 +57,12 @@
             this.verticalline = new System.Windows.Forms.Label();
             this.snapshot1color = new System.Windows.Forms.Label();
             this.snapshot2color = new System.Windows.Forms.Label();
+            this.pauseshortctlabel = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pauseButton = new System.Windows.Forms.Button();
+            this.statusLabel = new System.Windows.Forms.Label();
+            this.fourPointsLabel = new System.Windows.Forms.Label();
+            this.fourPointsText = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // x
@@ -326,11 +332,75 @@
             this.snapshot2color.Size = new System.Drawing.Size(160, 10);
             this.snapshot2color.TabIndex = 29;
             // 
+            // pauseshortctlabel
+            // 
+            this.pauseshortctlabel.AutoSize = true;
+            this.pauseshortctlabel.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pauseshortctlabel.Location = new System.Drawing.Point(488, 38);
+            this.pauseshortctlabel.Name = "pauseshortctlabel";
+            this.pauseshortctlabel.Size = new System.Drawing.Size(52, 16);
+            this.pauseshortctlabel.TabIndex = 30;
+            this.pauseshortctlabel.Text = "(Ctrl + 3)";
+            // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.label1.Location = new System.Drawing.Point(385, 13);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(1, 206);
+            this.label1.TabIndex = 31;
+            // 
+            // pauseButton
+            // 
+            this.pauseButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pauseButton.Location = new System.Drawing.Point(407, 38);
+            this.pauseButton.Name = "pauseButton";
+            this.pauseButton.Size = new System.Drawing.Size(75, 23);
+            this.pauseButton.TabIndex = 33;
+            this.pauseButton.Text = "PAUSE";
+            this.pauseButton.UseVisualStyleBackColor = true;
+            this.pauseButton.Click += new System.EventHandler(this.pauseButton_Click);
+            // 
+            // statusLabel
+            // 
+            this.statusLabel.AutoSize = true;
+            this.statusLabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.statusLabel.ForeColor = System.Drawing.Color.Green;
+            this.statusLabel.Location = new System.Drawing.Point(403, 13);
+            this.statusLabel.Name = "statusLabel";
+            this.statusLabel.Size = new System.Drawing.Size(93, 19);
+            this.statusLabel.TabIndex = 34;
+            this.statusLabel.Text = "RUNNING...";
+            // 
+            // fourPointsLabel
+            // 
+            this.fourPointsLabel.AutoSize = true;
+            this.fourPointsLabel.Font = new System.Drawing.Font("Century Gothic", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fourPointsLabel.Location = new System.Drawing.Point(403, 85);
+            this.fourPointsLabel.Name = "fourPointsLabel";
+            this.fourPointsLabel.Size = new System.Drawing.Size(91, 19);
+            this.fourPointsLabel.TabIndex = 35;
+            this.fourPointsLabel.Text = "Four points";
+            // 
+            // fourPointsText
+            // 
+            this.fourPointsText.Location = new System.Drawing.Point(407, 113);
+            this.fourPointsText.Name = "fourPointsText";
+            this.fourPointsText.ReadOnly = true;
+            this.fourPointsText.Size = new System.Drawing.Size(129, 20);
+            this.fourPointsText.TabIndex = 36;
+            // 
             // CursorTracker
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(389, 228);
+            this.ClientSize = new System.Drawing.Size(557, 228);
+            this.Controls.Add(this.fourPointsText);
+            this.Controls.Add(this.fourPointsLabel);
+            this.Controls.Add(this.statusLabel);
+            this.Controls.Add(this.pauseButton);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.pauseshortctlabel);
             this.Controls.Add(this.snapshot2color);
             this.Controls.Add(this.snapshot1color);
             this.Controls.Add(this.verticalline);
@@ -360,7 +430,7 @@
             this.Controls.Add(this.lbly);
             this.Controls.Add(this.y);
             this.Controls.Add(this.x);
-            this.MaximumSize = new System.Drawing.Size(405, 267);
+            this.MaximumSize = new System.Drawing.Size(573, 267);
             this.MinimumSize = new System.Drawing.Size(196, 267);
             this.Name = "CursorTracker";
             this.RightToLeftLayout = true;
@@ -399,6 +469,12 @@
         private System.Windows.Forms.Label verticalline;
         private System.Windows.Forms.Label snapshot1color;
         private System.Windows.Forms.Label snapshot2color;
+        private System.Windows.Forms.Label pauseshortctlabel;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button pauseButton;
+        private System.Windows.Forms.Label statusLabel;
+        private System.Windows.Forms.Label fourPointsLabel;
+        private System.Windows.Forms.TextBox fourPointsText;
     }
     
 }
