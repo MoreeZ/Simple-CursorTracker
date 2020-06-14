@@ -6,6 +6,7 @@ using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using MouseKeyboardActivityMonitor;
 using MouseKeyboardActivityMonitor.WinApi;
+using System.Windows.Input;
 
 namespace CursorTracker
 {
@@ -13,8 +14,6 @@ namespace CursorTracker
     {
         private readonly MouseHookListener m_mouseListener;
         private readonly KeyboardHookListener keyboardListener;
-
-
         public CursorTracker()
         {
             InitializeComponent();
@@ -32,9 +31,8 @@ namespace CursorTracker
             {
                 Enabled = true
             };
-            keyboardListener.KeyPress += DetectMinusAndPause;
+            keyboardListener.KeyDown += AddSnapshotOnKeyPress;
         }
-
 
 
         private void MyMouseMoveExt(object sender, MouseEventExtArgs e)
@@ -42,28 +40,31 @@ namespace CursorTracker
             lblx.Text = e.X.ToString();
             lbly.Text = e.Y.ToString();
 
-            //Point cursor = new Point();
             var c = GetColorAt(e.Location);
             colordisplay.BackColor = Color.FromArgb(c.R, c.G, c.B);
             redval.Text = c.R.ToString();
             greenval.Text = c.G.ToString();
             blueval.Text = c.B.ToString();
-            //Console.WriteLine($"RED: {c.R}, GREEN: {c.G}, BLUE: {c.B}");
 
         }
 
-        private void DetectMinusAndPause(object sender, KeyPressEventArgs e)
+        private void AddSnapshotOnKeyPress(object sender, System.Windows.Forms.KeyEventArgs e)
         {
-            if (e.KeyChar == '-')
+            if(e.Control && e.KeyValue == 49)
             {
-                if (m_mouseListener.Enabled)
-                {
-                    m_mouseListener.Enabled = false;
-                }else
-                {
-                    m_mouseListener.Enabled = true;
-                }
+                snapshot1x.Text = lblx.Text;
+                snapshot1y.Text = lbly.Text;
+                snapshot1rgb.Text = $"({redval.Text}, {greenval.Text}, {blueval.Text})";
+                snapshot1color.BackColor = Color.FromArgb(int.Parse(redval.Text), int.Parse(greenval.Text), int.Parse(blueval.Text));
             }
+            if (e.Control && e.KeyValue == 50)
+            {
+                snapshot2x.Text = lblx.Text;
+                snapshot2y.Text = lbly.Text;
+                snapshot2rgb.Text = $"({redval.Text}, {greenval.Text}, {blueval.Text})";
+                snapshot2color.BackColor = Color.FromArgb(int.Parse(redval.Text), int.Parse(greenval.Text), int.Parse(blueval.Text));
+            }
+
         }
 
         [DllImport("gdi32.dll", CharSet = CharSet.Auto, SetLastError = true, ExactSpelling = true)]
